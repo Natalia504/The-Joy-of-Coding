@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //factory pattern
+      var peopleFactory = function(name, age, state) {
+
+        var temp = {};
+        temp.age = age;
+        temp.name = name;
+        temp.state = state;
+
+        temp.printPerson = function(){
+          console.log(`${this.name} is ${this.age} years old, and lives in ${this.state}`);
+        }
+
+        return temp;
+      }
+
+      var person1 = peopleFactory('john', 23, 'California');
+      var person2 = peopleFactory('Kim', 27, 'Seatle');
+
+      person1.printPerson();
+      person2.printPerson();
+
+    </script>
+
+    <script>
+      //constructor pattern
+      //problem(this will create multiple instances of print person function which is redundant and a waste of space)
+      var peopleConstructor = function(name, age, state) {
+        this.name = name;
+        this.age = age;
+        this.state = state;
+        this.printPerson = function() {
+          console.log(`${this.name} is ${this.age} years old, and lives in ${this.state}`);
+        };
+      }
+
+      var guy1 = new peopleConstructor('🐫', 7, 'Egypt');
+      var guy2 = new peopleConstructor('🐀', 2, 'New York');
+
+      guy1.printPerson();
+      guy2.printPerson();
+
+    </script>
+
+    <script>
+    //Prototype pattern
+      var peoplePrototype = function() {
+
+      }
+    </script>
+  </body>
+</html>

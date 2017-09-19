@@ -1,0 +1,43 @@
+      .flex-container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-between;
+        align-items: center;
+        /*flex-direction: column;*/
+        align-content: stretch;
+      }
+
+      .flex-item {
+        flex: 1;
+        order: 1;
+        background: #bada55;
+        border: green solid;
+        height: 100px;
+        /*width: 100px;*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .one {
+        flex: 1;
+      }
+
+      .two {
+        flex: 2;
+      }
+
+      .tiny {
+        width: 15px;
+        height: 15px;
+        background: teal;
+      }
+
+      @media(max-width: 600px) {
+        .rearange {
+          order: 2;
+          background: pink;
+        }
+      }

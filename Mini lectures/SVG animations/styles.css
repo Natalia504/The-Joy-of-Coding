@@ -1,0 +1,23 @@
+#XMLID_1_ {
+  x: 0;
+  fill: none;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 0;
+  animation: dash 3s ease-in-out;
+}
+
+#XMLID_1_ {
+
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+    x: 400;
+  }
+}
+
+
+body {
+  background-color: pink;
+}
