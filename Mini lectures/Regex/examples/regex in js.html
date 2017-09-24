@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // this will make a string
+      const string = 'hello';
+
+      // this makes a regex expression
+      const regex = /hello/;
+      const rDigits = /\d{3}/;
+
+      // Turning a string variable into a regex
+      const regexTwo = new RegExp(string);
+
+      //using a regex to test text
+      console.log('String test: "hello"', rDigits.test('hello'));
+      console.log('String test: "123"', rDigits.test('123'));
+
+      //testing emails
+      const emailTest = /.*@.*\.(net|com|org)/
+      console.log('Email: "Bob.Ross@paintingIsLife.com"', emailTest.test('Bob.Ross@paintingIsLife.com'));
+            console.log('Email: "Bob.Ross@paintingIsLife.bom"', emailTest.test('Bob.Ross@paintingIsLife.bom'));
+
+
+      //You can use the match method on a string and pass it a regex to see if there is an instance of that in a string.
+      let alive = /alive/;
+      const matchString = "Bob Ross is the best man alive, and yes he is still alive."
+      console.log('Ross Match: ', matchString.match(alive));
+
+      //you will notice that there are two instances of the word alive in the above string but it only matches the first one. If you add a g to the end of the expression
+      alive = /alive/g;
+      console.log('Ross Match Global: ', matchString.match(alive));
+
+      //also if you want it to be case insensitive add i with the g
+
+      //if you are wanting to use capture groups with RegEx you can not use the global flag. You have to use the command .exec() on the string. How ever it returns after the first match, every time you call it, it will return the next match until no matches are found then it will return null.
+
+      var multipleMatches = 'Bob Ross, is perhaps the Ross Boss of all Bobs. Bob Ross is the best Ross';
+      const multipleRossRegex = /Ross/g;
+
+      // we need to make a loop that will keep running exec on the string to get all matches.
+
+      console.log(multipleRossRegex.exec(multipleMatches));
+      console.log(multipleRossRegex.exec(multipleMatches));
+      console.log(multipleRossRegex.exec(multipleMatches));
+      console.log(multipleRossRegex.exec(multipleMatches));
+      console.log(multipleRossRegex.exec(multipleMatches));
+
+      //comment out the above logs and uncomment out the loop below
+
+      var result;
+      var results = [];
+      while (result = multipleRossRegex.exec(multipleMatches)) {
+        results.push(result)
+      }
+      console.log(results);
+
+
+      //using .replace() .replace takes two parameters, a regex or a string in the first, and the second takes a string or a function.
+
+      var replaceString = 'Bob Ross and Richard Simmons are protectors of this dimension from the dimension of evil and hate.'
+
+      console.log(replaceString.replace(/[aeiou]/g, '?'));
+
+      //You can also use $1 to reference the capture group in the replace. Below is an example of doubling every vowel using $1. Notice also we added () around the [] to signify there is a capture group.
+
+      console.log(replaceString.replace(/([aeiou])/g, "$1$1"));
+
+      //You can also pass in a function to the second parameter, the function will get every match passed in as a parameter as long as you use the global flag.
+
+      //this will match each word and check if it is 4 characters long, if it is then return an all capitalized version of the string.
+      console.log(replaceString.replace(/\b\w+\b/g, (match) => {
+        if (match.length === 4) {
+          return match.toUpperCase()
+        } else {
+          return match
+        }
+      }));
+
+      //Below we have a toy problem that asks us to change out each character in a string into 'Leet speek.' So each A will become @ and B will be 8 and so on. notice not all letters appear in our object. We can see the power of replace and regex to replace each character
+
+      const D = {
+        A: '@', B: '8', C: '(', E: '3',
+        G: '6', H: '#', I: '!', L: '1',
+        O: '0', S: '$', T: '7', Z: '2'
+      };
+
+      replaceString = replaceString.toLocaleUpperCase();
+      
+      console.log(replaceString.replace(/[ABCEGHILOSTZ]/g, c => D[c]));
+
+
+  </script>  
+</body>
+</html>
+
+
