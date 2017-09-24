@@ -7,40 +7,60 @@ a few of these examples will have you use the ctrl-f search menu inside your tex
 ## QUANTIFIERS
 
 `*` (any number of any characters, 0 or more)
+
 `+` (1 or more)
+
 `?` (0 or 1)
+
 `{min, max}` (a string that has anything between min and max)
+
 `{n}` (a string that has exactly this many characters)
+
 `[abc]` (match either a, b, or c)
+
 `[- a-z]` (single dash is literal - surrounded means a through z)
+
 `[^abc]` (anything that is not, a, b or c)
 
 ## Capture Groups
 
 `()` (Captures surrounded section into separate sections)
+
 `$1` (replace section 1)
+
 `\1` (select section 1)
 
 ## POSITION
 
 `^` (begging of a line)
+
 `$` (end of a line)
+
 `\b` (word boundary)
 
 ## SINGLE CHARACTERS selectors
 
 `.` (any character)
+
 `\d` (any digit 0-9)
+
 `\w` (any character A-Z a-z 0-9)
+
 `\W` (any thing that is not A-Z a-z 0-9)
+
 `\s` (any white space)
+
 `\S` (anything that is not white space)
+
 `\.` (literal period)
+
 `\(` (literal parenthesis)
 
 
 ## JS specific tags
+
 `g` (global, when using things like match it will only find the first instance, but g will find all matches)
+
 `i` (case insensitive)
 
 ## JS Commands
