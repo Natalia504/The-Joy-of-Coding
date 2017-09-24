@@ -4,6 +4,32 @@
 
 a few of these examples will have you use the ctrl-f search menu inside your text editor. If you press the button that looks like .* then your search will use regex.
 
+## SINGLE CHARACTERS selectors
+
+`.` Any character
+
+`\d` Any digit 0-9
+
+`\w` Any character A-Z a-z 0-9
+
+`\W` Any thing that is not A-Z a-z 0-9
+
+`\s` Any white space
+
+`\S` Anything that is not white space
+
+`\.` Literal period
+
+`\(` Literal parenthesis
+
+## POSITION
+
+`^` Begging of a line.
+
+`$` End of a line.
+
+`\b` Word boundary, things like space or enter.
+
 ## QUANTIFIERS
 
 `*` Any number of any characters, 0 or more
@@ -29,32 +55,6 @@ a few of these examples will have you use the ctrl-f search menu inside your tex
 `$1` Capture group 1.
 
 `\1` Select capture group 1.
-
-## POSITION
-
-`^` Begging of a line.
-
-`$` End of a line.
-
-`\b` Word boundary, things like space or enter.
-
-## SINGLE CHARACTERS selectors
-
-`.` Any character
-
-`\d` Any digit 0-9
-
-`\w` Any character A-Z a-z 0-9
-
-`\W` Any thing that is not A-Z a-z 0-9
-
-`\s` Any white space
-
-`\S` Anything that is not white space
-
-`\.` Literal period
-
-`\(` Literal parenthesis
 
 
 ## JS specific tags
