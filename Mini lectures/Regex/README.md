@@ -2,7 +2,7 @@
 
 ## Using regex in the Markdown files
 
-a few of these examples will have you use the ctrl-f search menu inside your text editor. If you press the button that looks like .* then your search will use regex.
+To get you comfortable using RegEx you should clone this repo and use your text editors ctrl-f search menu. If you press the button that looks like `.*` then your search will use regex. Look over the other .md files in this repo and follow along to get use to using regex to select text. When you feel comfortable using plain Regex there is an HTML doc that
 
 ## SINGLE CHARACTERS selectors
 
