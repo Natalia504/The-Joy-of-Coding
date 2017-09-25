@@ -1,8 +1,8 @@
 # Regex Commands
 
-## Using regex in the Markdown files
+## Using RegEx in the Markdown files
 
-To get you comfortable using RegEx you should clone this repo and use your text editors ctrl-f search menu. If you press the button that looks like `.*` then your search will use regex. Look over the other .md files in this repo and follow along to get use to using regex to select text. When you feel comfortable using plain Regex there is an HTML doc that
+To get you comfortable using RegEx you should clone this repo and use your text editors ctrl-f search menu. If you press the button that looks like `.*` then your search will use RegEx. Look over the other .md files in this repo and follow along to get use to using RegEx to select text. When you feel comfortable using plain Regex there is an HTML doc that
 
 ## SINGLE CHARACTERS selectors
 
@@ -67,13 +67,13 @@ To get you comfortable using RegEx you should clone this repo and use your text 
 
 `.exec()` This method goes on a Regex and expects a sting. It can be run multiple times to get all the matches and capture groups form a string.
 
-`.match()`This method goes on a string and can take in a regex. it will return the first match it finds, unless you add on the global tag on your regex
+`.match()`This method goes on a string and can take in a RegEx. it will return the first match it finds, unless you add on the global tag on your RegEx
 
-`.test()` This method goes on a regex and takes in a string. It returns true if a match can be found and false if not.
+`.test()` This method goes on a RegEx and takes in a string. It returns true if a match can be found and false if not.
 
-`.split()` This method goes on a regex and can take in regex so describe how to split up a string into an array
+`.split()` This method goes on a RegEx and can take in RegEx so describe how to split up a string into an array
 
-`.replace()` This method goes on a string and can take in a regex
+`.replace()` This method goes on a string and can take in a RegEx
 
 ## Additional Resources
 
@@ -81,4 +81,4 @@ To get you comfortable using RegEx you should clone this repo and use your text 
 https://www.youtube.com/watch?v=7DG3kCDx53c&index=1&list=PLRqwX-V7Uu6YEypLuls7iidwHMdCM6o2w
 
 *Code Wars*
-https://www.codewars.com/collections/regex-32
+https://www.codewars.com/collections/RegEx-32

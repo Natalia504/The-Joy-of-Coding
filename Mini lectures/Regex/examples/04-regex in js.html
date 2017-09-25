@@ -13,19 +13,19 @@
   </style>
 </head>
 <body>
-  <h1>Open your inspector to view the regex output.</h1>
+  <h1>Open your inspector to view the RegEx output.</h1>
   <script>
     // this will make a string
       const string = 'hello';
 
-      // this makes a regex expression
-      const regex = /hello/;
+      // this makes a RegEx expression
+      const RegEx = /hello/;
       const rDigits = /\d{3}/;
 
-      // Turning a string variable into a regex
-      const regexTwo = new RegExp(string);
+      // Turning a string variable into a RegEx
+      const RegExTwo = new RegExp(string);
 
-      //using a regex to test text
+      //using a RegEx to test text
       console.log('String test: "hello"', rDigits.test('hello'));
       console.log('String test: "123"', rDigits.test('123'));
 
@@ -35,7 +35,7 @@
             console.log('Email: "Bob.Ross@paintingIsLife.bom"', emailTest.test('Bob.Ross@paintingIsLife.bom'));
 
 
-      //You can use the match method on a string and pass it a regex to see if there is an instance of that in a string.
+      //You can use the match method on a string and pass it a RegEx to see if there is an instance of that in a string.
       let alive = /alive/;
       const matchString = "Bob Ross is the best man alive, and yes he is still alive."
       console.log('Ross Match: ', matchString.match(alive));
@@ -69,7 +69,7 @@
       console.log(results);
 
 
-      //using .replace() .replace takes two parameters, a regex or a string in the first, and the second takes a string or a function.
+      //using .replace() .replace takes two parameters, a RegEx or a string in the first, and the second takes a string or a function.
 
       var replaceString = 'Bob Ross and Richard Simmons are protectors of this dimension from the dimension of evil and hate.'
 
@@ -90,7 +90,7 @@
         }
       }));
 
-      //Below we have a toy problem that asks us to change out each character in a string into 'Leet speek.' So each A will become @ and B will be 8 and so on. notice not all letters appear in our object. We can see the power of replace and regex to replace each character
+      //Below we have a toy problem that asks us to change out each character in a string into 'Leet speek.' So each A will become @ and B will be 8 and so on. notice not all letters appear in our object. We can see the power of replace and RegEx to replace each character
 
       const D = {
         A: '@', B: '8', C: '(', E: '3',

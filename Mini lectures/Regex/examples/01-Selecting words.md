@@ -21,7 +21,7 @@ Lets select all words that start with a vowel. We can use the `[]` to specify th
 
 `\b[aeiou]\w+\b`
 
-this tells regex to select any word that is surrouned with spaces and starts with aeiou followed by one or more characters. The `+` means one or more. But if you notice we have not selected any words that are one letter long that start with a vowel.
+this tells RegEx to select any word that is surrouned with spaces and starts with aeiou followed by one or more characters. The `+` means one or more. But if you notice we have not selected any words that are one letter long that start with a vowel.
 
 if we wrap the \w+ in parenthesis and add a `?` to the end it means that part is optional, meaning it has to start with a vowel and can any number of characters after, or none.
 
