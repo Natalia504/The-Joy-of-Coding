@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <h1 style="margin:auto; width:70%;">Local Storage, Session Storage, and Cookies</h1>
+
+      <script>
+        //local storage can hold 10mb and lasts forever, unless cleared
+        //stored locally on the browser
+
+        //local storage only takes text, no other values
+        localStorage.setItem('lunch', 'cereal')
+        localStorage.setItem('breakfast', 'pankake')
+        console.log(localStorage.getItem('breakfast'))
+
+        //remove single item
+        // localStorage.removeItem('lunch')
+
+        //remove all items
+        // localStorage.clear()
+
+        var obj = {
+          name: 'todd',
+          age: 25,
+          gamerTag: 'rasbandit'
+        }
+
+        //this wont work and will store a string of [objecct Object].
+        //we need to convert it to a JSON string object
+        // localStorage.setItem('person', obj)
+
+        localStorage.setItem('person', JSON.stringify(obj))
+        console.log(JSON.parse(localStorage.getItem('person')))
+
+
+
+        //session storage can hold 5mb but expires when the tab closes.
+        //stored on the browser
+        //all commands are the same as localStorage just swap out localStorage for sessionStorage
+
+
+
+        //cookies has 4kb storage and will expire after a set tiem.
+        //by default will expire on tab close
+        //stored on both the server and browser
+        //only works if there is a web server like live server
+        document.cookie = "hello=true";
+        //now expires on specified date
+        document.cookie = 'doSomtingOnlyOnce=true; expires=fri, 31 Dec 2020 23:59:59 GMT';
+
+        console.log(document.cookie);
+
+      </script>
+  </body>
+</html>
