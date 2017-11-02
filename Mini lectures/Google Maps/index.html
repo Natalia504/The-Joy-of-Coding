@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Google Maps Test</title>
+  <style>
+   #map {
+     width: 100%px;
+     height:90vh;
+   }
+  </style>
+</head>
+<body>
+  <h1>My Google map</h1>
+
+  <div id="map">
+
+  </div>
+
+  <script>
+    function initMap() {
+      let options ={
+        zoom: 14,
+        center: { lat: 40.267, lng: -111.683 }
+      }
+      var map = new google.maps.Map(document.getElementById('map'), { zoom: options.zoom, center: options.center });
+      var markerByu = new google.maps.Marker({ position: { lat: 40.2518, lng: -111.6493 }, map: map });
+      var markerUvu = new google.maps.Marker({ position: { lat: 40.2788, lng: -111.7152 }, map: map });
+
+      var infoWindowByu = new google.maps.infoWindow({
+        content: '<h1>BYU</h1>'
+      })
+      var infoWindowByu = new google.maps.infoWindow({
+          content: '<h1>BYU</h1>'
+      })
+    }
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKPCmBLcLcFrmSZY6u4c0xqEBbBlpGhgs&callback=initMap" type="text/javascript"></script>
+</body>
+</html>
